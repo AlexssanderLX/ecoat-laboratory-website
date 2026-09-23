@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg, #ffffff);
+  color: var(--fg, #10233b);
+}
+
+/* ============================================================
+   DESIGN TOKENS POR PROPOSTA
+   (mesmos nomes de token, valores diferentes por versão)
+   ============================================================ */
+
+/* V1 — Corporate Clean: branco, azul corporativo, geometria simples */
+.theme-v1 {
+  --bg: #ffffff;
+  --surface: #f6f8fb;
+  --elevated: #ffffff;
+  --fg: #0f2540;
+  --muted: #5a6b80;
+  --primary: #1257a6;
+  --primary-ink: #0b3d73;
+  --accent: #2e86de;
+  --line: #e3e9f1;
+  --radius: 12px;
+  --shadow-soft: 0 1px 2px rgba(15, 37, 64, 0.06);
+  --shadow-card: 0 12px 30px -18px rgba(15, 37, 64, 0.28);
+}
+
+/* V2 — Technical Industrial: cinza claro, azul profundo/grafite, linhas técnicas */
+.theme-v2 {
+  --bg: #eef2f6;
+  --surface: #ffffff;
+  --elevated: #ffffff;
+  --fg: #14202e;
+  --muted: #55636f;
+  --primary: #123650;
+  --primary-ink: #0a2436;
+  --accent: #1e6091;
+  --line: #cfd8e2;
+  --radius: 4px;
+  --shadow-soft: 0 1px 0 rgba(18, 54, 80, 0.08);
+  --shadow-card: 0 10px 24px -16px rgba(10, 36, 54, 0.35);
+}
+
+/* V3 — Premium Editorial: off-white quente, tipografia forte, muito espaço */
+.theme-v3 {
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --elevated: #ffffff;
+  --fg: #17222e;
+  --muted: #6a7481;
+  --primary: #1b3a5b;
+  --primary-ink: #12293f;
+  --accent: #3e6e9e;
+  --line: #e7e3d9;
+  --radius: 2px;
+  --shadow-soft: 0 1px 2px rgba(23, 34, 46, 0.05);
+  --shadow-card: 0 18px 44px -28px rgba(23, 34, 46, 0.3);
+}
+
+.shell {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+}
+.shell-wide {
+  max-width: 1320px;
+}
+
+.eyebrow {
+  font-family: var(--font-body), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
