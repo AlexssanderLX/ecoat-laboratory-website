@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "LabEnDiTec — Propostas de Homepage",
+  title: "LabEnDiTec — Laboratório de E-coat e Eletrodeposição",
   description:
-    "Ambiente de avaliação: três propostas visuais (V1, V2, V3) para o site institucional do laboratório de E-coat / eletrodeposição.",
+    "Laboratório especializado em E-coat / eletrodeposição (KTL, cataforese): ensaio, diagnóstico e conhecimento técnico para processos de revestimento industrial.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

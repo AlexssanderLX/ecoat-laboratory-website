@@ -81,9 +81,9 @@ export const serviceGroups = [
   {
     title: "Capacitação",
     items: [
-      "Treinamento E-coat — módulo básico",
-      "Treinamento E-coat — módulo intermediário",
-      "Treinamento E-coat — módulo avançado",
+      "Treinamento E-coat · módulo básico",
+      "Treinamento E-coat · módulo intermediário",
+      "Treinamento E-coat · módulo avançado",
     ],
   },
 ];

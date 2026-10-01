@@ -13,3 +13,6 @@ next-env.d.ts
 .claude
 .vscode
 .idea
+
+# Documentos internos do cliente (nao versionar — repo publico)
+Cliente dados/
