@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { motion } from "framer-motion";
 import { Reveal, RevealGroup, staggerItem } from "@/components/Reveal";
 import { ProcessStory } from "@/components/ProcessStory";
 import { HeroVideo } from "@/components/HeroVideo";
 import { SystemScreen } from "@/components/SystemScreen";
+import { TechProcess } from "@/components/TechProcess";
 import {
   company,
   nav,
@@ -191,6 +193,9 @@ export default function LabHome() {
         </div>
       </section>
 
+      {/* ==================== COMO O E-COAT SE FORMA (vídeo scrubado + etapas) ==================== */}
+      <TechProcess />
+
       {/* ==================== VALOR DO LAB (lista editorial, sem cards) ==================== */}
       <section id="sobre" className="bg-bg py-20 md:py-28">
         <div className="shell grid gap-14 lg:grid-cols-[0.85fr_1.15fr]">
@@ -203,6 +208,15 @@ export default function LabHome() {
               controlado. Resultados de laboratório não são apenas números: são
               informação para decisões técnicas.
             </p>
+            <div className="relative mt-8 aspect-[16/10] overflow-hidden rounded-token border border-line shadow-card">
+              <Image
+                src="/images/lab-ph-ecoat.jpg"
+                alt="Medição de pH em banho de E-coat no laboratório"
+                fill
+                sizes="(max-width:1024px) 100vw, 42vw"
+                className="object-cover"
+              />
+            </div>
           </Reveal>
 
           <RevealGroup
