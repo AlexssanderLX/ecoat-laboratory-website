@@ -8,11 +8,11 @@ import { Reveal, RevealGroup, staggerItem } from "@/components/Reveal";
 import { ProcessStory } from "@/components/ProcessStory";
 import { HeroVideo } from "@/components/HeroVideo";
 import { SystemScreen } from "@/components/SystemScreen";
+import { SystemSum } from "@/components/SystemSum";
 import { TechProcess } from "@/components/TechProcess";
 import {
   company,
   nav,
-  systemFactors,
   serviceGroups,
   labValue,
   positioning,
@@ -144,54 +144,8 @@ export default function LabHome() {
         <ProcessStory />
       </section>
 
-      {/* ==================== SISTEMA (cadeia horizontal de fatores) ==================== */}
-      <section id="sistema" className="bg-primary py-20 text-white md:py-28">
-        <div className="shell">
-          <Reveal className="max-w-2xl">
-            <h2 className="font-heading text-3xl font-bold leading-tight tracking-tight md:text-[2.5rem]">
-              O desempenho é a soma das partes.
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-white/70">
-              O resultado não depende só da tinta. Ele nasce da interação entre
-              seis variáveis técnicas. O laboratório existe para entender essa
-              cadeia inteira.
-            </p>
-          </Reveal>
-
-          <RevealGroup
-            className="mt-14 flex flex-wrap items-stretch gap-3"
-            stagger={0.06}
-          >
-            {systemFactors.map((f, i) => (
-              <motion.div
-                key={f}
-                variants={staggerItem}
-                className="flex flex-1 items-center gap-3"
-              >
-                <div className="min-w-[9.5rem] flex-1 rounded-token border border-white/15 bg-white/[0.04] px-4 py-5">
-                  <span
-                    className="font-mono text-xs"
-                    style={{ color: "var(--accent-glow)" }}
-                  >
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <p className="mt-2 font-heading text-base font-semibold leading-snug">
-                    {f}
-                  </p>
-                </div>
-                {i < systemFactors.length - 1 && (
-                  <span
-                    aria-hidden
-                    className="hidden shrink-0 text-lg text-white/30 lg:block"
-                  >
-                    →
-                  </span>
-                )}
-              </motion.div>
-            ))}
-          </RevealGroup>
-        </div>
-      </section>
+      {/* ==================== SISTEMA (soma das partes — hover + equação) ==================== */}
+      <SystemSum />
 
       {/* ==================== COMO O E-COAT SE FORMA (vídeo scrubado + etapas) ==================== */}
       <TechProcess />

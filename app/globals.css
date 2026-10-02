@@ -20,9 +20,10 @@ body {
 
 .shell {
   width: 100%;
-  max-width: 1200px;
+  /* fluido: acompanha a tela do cliente (94vw) com teto pra telas ultralargas */
+  max-width: min(1760px, 94vw);
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 4vw, 3rem);
+  padding-inline: clamp(1rem, 3vw, 2.5rem);
 }
 .shell-wide {
   max-width: 1320px;
